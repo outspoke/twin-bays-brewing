@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+
+.DS_Store
+assets/bower_components
+assets/node_modules
+npm-debug.log

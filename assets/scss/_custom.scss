@@ -1,0 +1,202 @@
+/* Global
+--------- */
+a,
+.button {
+  transition: opacity ease 0.3s;
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
+}
+
+.button.hollow {
+  border-width: rem-calc(3);
+  padding: rem-calc(5);
+  span {
+    border: rem-calc(1) solid $black;
+    padding: $button-padding;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @include breakpoint(large) {
+    margin: 0;
+  }
+}
+
+.sep {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parlour {
+  font-family: 'Parlour Pro', serif;
+  text-align: center;
+  border: rem-calc(1) solid $black;
+  border-left: 0;
+  border-right: 0;
+}
+
+.main > .row > .columns {
+  padding-top: rem-calc(20);
+  @include breakpoint(large) {
+    padding-top: 0;
+  }
+}
+
+/* Header + Footer
+------------------ */
+.header {
+  padding-top: rem-calc(65);
+  padding-bottom: rem-calc(50);
+
+  .est {
+    border-right: rem-calc(1) solid $black;
+    line-height: rem-calc(85);
+    vertical-align: middle;
+  }
+
+  .coming-soon {
+    border-left: rem-calc(1) solid $black;
+  }
+
+  .title h2 {
+    margin: 0;
+    font-family: $body-font-family;
+    letter-spacing: 9.47px;
+    text-transform: uppercase;
+    font-weight: $global-weight-normal;
+  }
+
+  h3 {
+    margin: 0;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+  }
+
+  h3,
+  h2 {
+    line-height: rem-calc(85);
+    vertical-align: middle;
+  }
+}
+
+.footer,
+.header {
+  hr {
+    border-top: rem-calc(5) solid black;
+    padding: rem-calc(5);
+    border-bottom: rem-calc(1) solid $black;
+    margin: 0;
+  }
+}
+
+.footer {
+  padding-top: rem-calc(50);
+  address {
+    font-style: normal;
+    padding: rem-calc(25 0);
+    margin: 0;
+  }
+}
+
+/* Content
+---------- */
+.primary-content {
+  @include breakpoint(large) {
+    padding: rem-calc(15 30);
+    border-radius: rem-calc(8);
+    border: rem-calc(3) solid black;
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      background: $white;
+      height: rem-calc(3);
+      position: absolute;
+      left: rem-calc(6);
+      right: rem-calc(6);
+    }
+    &:before {
+      top: rem-calc(-3);
+    }
+    &:after {
+      bottom: rem-calc(-3);
+    }
+
+    .decorative-arrow {
+      display: block;
+      position: absolute;
+      top: 50%;
+
+      &.left {
+        left: rem-calc(-10);
+        &:before {
+          @include css-triangle(9px, $black, left);
+        }
+
+        &:after {
+          @include css-triangle(6px, $white, left);
+          position: absolute;
+          top: rem-calc(3);
+          left: rem-calc(4);
+        }
+      }
+
+      &.right {
+        right: rem-calc(-10);
+        &:before {
+          @include css-triangle(9px, $black, right);
+        }
+
+        &:after {
+          @include css-triangle(6px, $white, right);
+          position: absolute;
+          top: rem-calc(3);
+          right: rem-calc(4);
+        }
+      }
+    }
+  }
+}
+.train-car img {
+  max-width: 85%;
+}
+
+.facebook {
+  margin-bottom: rem-calc(30);
+}
+
+.instagram {
+  margin-top: rem-calc(30);
+  padding-top: rem-calc(30);
+  border-top: 1px solid $black;
+}
+
+.callout {
+  position: relative;
+  margin-bottom: rem-calc(50);
+  margin-right: rem-calc(20);
+  img {
+    position: absolute;
+    right: rem-calc(-30);
+    bottom: rem-calc(-20);
+    max-width: rem-calc(220);
+  }
+  p {
+    padding-right: rem-calc(30);
+  }
+}
+
+.read-btn {
+  display: block;
+  margin-bottom: $paragraph-margin-bottom;
+
+  @include breakpoint(large) {
+    &.press-btn {
+      margin-top: rem-calc(100);
+    }
+  }
+}
