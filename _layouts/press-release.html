@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ "/assets/fonts/parlour-pro/stylesheet.css" | relative_url }}">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{{ "/assets/css/app.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  </head>
+  <body class="press-release">
+
+    <header class="header">
+      <div class="row">
+        <div class="large-12 columns">
+          <hr />
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-8 large-centered columns">
+          <div class="title text-center">
+            <h2>Press Release</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <hr class="btm" />
+        </div>
+      </div>
+    </header>
+
+    <section class="main">
+      {{ content }}
+    </section>
+
+    <footer class="footer text-center">
+      <div class="row">
+        <div class="large-12 columns">
+          <hr />
+          <address>
+            <a href="https://www.google.com/maps/place/3201+39th+Ave+N,+St.+Petersburg,+FL+33714/@27.8076122,-82.6795496,17z/data=!3m1!4b1!4m5!3m4!1s0x88c2e3912fdf00d1:0x56ec780bc6d61e1d!8m2!3d27.8076122!4d-82.6773609?hl=en" target="_blank">
+              3201 39th Ave N. Saint Petersburg, FL 33714
+            </a>
+          </address>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,what-input@2.1.1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js"
+      integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs="
+      crossorigin="anonymous">
+    </script>
+    <script src="{{ "/assets/js/app.js" | relative_url }}"></script>
+
+  </body>
+</html>

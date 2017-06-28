@@ -75,10 +75,12 @@ a,
     font-weight: $global-weight-normal;
   }
 
-  h3,
-  h2 {
-    line-height: rem-calc(85);
-    vertical-align: middle;
+  @include breakpoint(large) {
+    h3,
+    h2 {
+      line-height: rem-calc(85);
+      vertical-align: middle;
+    }
   }
 }
 
@@ -203,5 +205,16 @@ a,
     &.press-btn {
       margin-top: rem-calc(100);
     }
+  }
+}
+
+
+/* Press Release
+---------------- */
+@include breakpoint(large) {
+  .press-release .header h2 {
+    border: 1px solid $black;
+    border-top: 0;
+    border-bottom: 0;
   }
 }
